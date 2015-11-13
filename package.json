@@ -1,0 +1,37 @@
+{
+  "name": "jspm-system-require",
+  "version": "0.9.0",
+  "description": "Courtesy module for a one-time require of jspm.Loader() to avoid System undefined errors when testing jspm-managed node apps, with the goal of being able to include it from the command line (e.g. mocha -r <modulename>). Without creating a named module systemjs complains about anonymous registration calls.",
+  "main": "main.js",
+  "scripts": {
+    "test": "mocha main.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/krisdages/jspm-system-require"
+  },
+  "keywords": [
+    "jspm",
+    "systemjs",
+    "babel",
+    "register",
+    "bootstrap"
+  ],
+  "author": "Kris Dages <krisdages@git.whiteboxsoftware.net>",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.3",
+    "proxyquire": "^1.7.3"
+  },
+  "dependencies": {
+    "jspm": "^0.16.14"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "test"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+  }
+}
