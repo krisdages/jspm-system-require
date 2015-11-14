@@ -1,0 +1,10 @@
+ {
+ 	"sourceMaps": "both",
+    "presets": [
+      "es2015","stage-0"
+    ],
+    "plugins": [
+    	"syntax-class-constructor-call",
+    	"transform-class-constructor-call"
+    ]
+  }
