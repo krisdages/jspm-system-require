@@ -1,0 +1,20 @@
+'use strict';
+
+var JspmSystem = require('./jspm-system.js');
+
+var instanceKey = Symbol("node-jspm-env metadata");
+
+function Factory() {
+	/*ibabel*/var /*obabel*/options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+	/*ibabel*/var /*obabel*/rootScope = options.rootScope;
+	/*ibabel*/var /*obabel*/systemFactory = options.systemFactory;
+	//TODO: configurable array of extras and once-only check
+
+	require('babel-core/register');
+	var newInstance = new JspmSystem(rootScope, systemFactory);
+	newInstance.System[instanceKey] = newInstance;
+	return newInstance.System;
+};
+
+module.exports = Factory;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3NyYy9yZWdpc3Rlci5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxZQUFZLENBQUM7O0FBQ2IsSUFBSSxVQUFVLEdBQUMsT0FBTyxDQUFDLGtCQUFrQixDQUFDLENBQUM7O0FBRTNDLElBQU0sV0FBVyxHQUFHLE1BQU0sQ0FBQyx3QkFBd0IsQ0FBQyxDQUFDOztBQUVyRCxTQUFTLE9BQU8sR0FBZTt5QkFBZCxPQUFPLHlEQUFHLEVBQUU7eUJBRXRCLFNBQVMsR0FBb0IsT0FBTyxDQUFwQyxTQUFTO3lCQUFFLGFBQWEsR0FBSyxPQUFPLENBQXpCLGFBQWE7OztBQUU5QixRQUFPLENBQUMscUJBQXFCLENBQUMsQ0FBQztBQUMvQixLQUFJLFdBQVcsR0FBRyxJQUFJLFVBQVUsQ0FBQyxTQUFTLEVBQUUsYUFBYSxDQUFDLENBQUM7QUFDM0QsWUFBVyxDQUFDLE1BQU0sQ0FBQyxXQUFXLENBQUMsR0FBRyxXQUFXLENBQUM7QUFDOUMsUUFBTyxXQUFXLENBQUMsTUFBTSxDQUFDO0NBQzFCLENBQUM7O0FBRUYsTUFBTSxDQUFDLE9BQU8sR0FBRyxPQUFPLENBQUMiLCJmaWxlIjoicmVnaXN0ZXIuanMiLCJzb3VyY2VzQ29udGVudCI6WyIndXNlIHN0cmljdCc7XG5sZXQgSnNwbVN5c3RlbT1yZXF1aXJlKCcuL2pzcG0tc3lzdGVtLmpzJyk7XG5cbmNvbnN0IGluc3RhbmNlS2V5ID0gU3ltYm9sKFwibm9kZS1qc3BtLWVudiBtZXRhZGF0YVwiKTtcblxuZnVuY3Rpb24gRmFjdG9yeShvcHRpb25zID0ge30pIHsgXG5cdFxuXHRsZXQgeyByb290U2NvcGUsIHN5c3RlbUZhY3RvcnkgfSA9IG9wdGlvbnM7XG5cdC8vVE9ETzogY29uZmlndXJhYmxlIGFycmF5IG9mIGV4dHJhcyBhbmQgb25jZS1vbmx5IGNoZWNrXG5cdHJlcXVpcmUoJ2JhYmVsLWNvcmUvcmVnaXN0ZXInKTtcblx0bGV0IG5ld0luc3RhbmNlID0gbmV3IEpzcG1TeXN0ZW0ocm9vdFNjb3BlLCBzeXN0ZW1GYWN0b3J5KTtcblx0bmV3SW5zdGFuY2UuU3lzdGVtW2luc3RhbmNlS2V5XSA9IG5ld0luc3RhbmNlO1xuXHRyZXR1cm4gbmV3SW5zdGFuY2UuU3lzdGVtO1xufTtcblxubW9kdWxlLmV4cG9ydHMgPSBGYWN0b3J5O1xuIl19

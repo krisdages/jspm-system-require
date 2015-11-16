@@ -1,7 +1,7 @@
 'use strict';
 let JspmSystem=require('./jspm-system.js');
 
-const instanceKey = Symbol("jspm-system-require metadata");
+const instanceKey = Symbol("node-jspm-env metadata");
 
 function Factory(options = {}) { 
 	

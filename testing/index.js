@@ -1,4 +1,4 @@
 var System = GLOBAL.System;
-System = require('jspm-system-require/global');
+System = require('node-jspm-env/global');
 
 debugger;

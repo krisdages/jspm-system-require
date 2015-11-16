@@ -1,8 +1,8 @@
 {
-  "name": "jspm-system-register",
+  "name": "node-jspm-env",
   "version": "0.9.0",
   "description": "Courtesy module for a one-time require of jspm.Loader() to avoid System undefined errors when testing jspm-managed node apps, with the goal of being able to include it from the command line (e.g. mocha -r <modulename>). Without creating a named module systemjs complains about anonymous registration calls.",
-  "main": "dist/main.js",
+  "main": "dist/global.js",
   "scripts": {
     "build-once": "babel -d dist src --auxiliary-comment-before ibabel --auxiliary-comment-after obabel",
     "build-watch": "babel -w -d dist src --auxiliary-comment-before ibabel --auxiliary-comment-after obabel",
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "github.com/krisdages/jspm-system-register"
+    "url": "https://github.com/krisdages/node-jspm-env"
   },
   "keywords": [
     "jspm",
@@ -33,6 +33,17 @@
   ],
   "author": "Kris Dages <krisdages@git.whiteboxsoftware.net>",
   "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.1.18",
+    "babel-core": "6.1.21",
+    "babel-plugin-syntax-class-constructor-call": "^6.1.18",
+    "babel-plugin-transform-class-constructor-call": "^6.1.18",
+    "babel-plugin-transform-class-properties": "^6.1.20",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-stage-0": "^6.1.18",
+    "es6-module-loader": "^0.17.8",
+    "jspm": "github:jspm/jspm-cli#0.17"
+  },
   "devDependencies": {
     "babel-cli": "^6.1.18",
     "babel-core": "6.1.21",

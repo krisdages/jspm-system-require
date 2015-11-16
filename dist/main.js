@@ -2,7 +2,7 @@
 
 var JspmSystem = require('./jspm-system.js');
 
-var instanceKey = Symbol("jspm-system-require metadata");
+var instanceKey = Symbol("node-jspm-env metadata");
 
 function Factory() {
 	/*ibabel*/var /*obabel*/options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
